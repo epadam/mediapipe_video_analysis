@@ -1,8 +1,10 @@
 # mediapipe_video_analysis on kubernetes
 
-Use mediapipe with kafka
+For production level application
 
-In this example we try to wrap mediapipe in the predictor
+1. Model should keep being retrained and updated, therefore it should be decoupled with code.
+
+2. 
 
 ## Architecture
 
