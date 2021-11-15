@@ -8,23 +8,18 @@ For production level application
 
 ## Architecture
 
-Video Stream --> Docker(Kafka producer python) --> Docker(Kafka cluster) --> Docker(Kafka consumer python + mediapipe) --> monitoring
-                                                                                                                       --> Display Dashboard  
+Video Source --> (Video Stream(webRTC/rtsp)) --> Docker(Kafka producer python) --> Docker(Kafka cluster) --> Docker(Kafka consumer/python + mediapipe) --> monitoring
+                                                                                                                                                       --> Display Dashboard  
                                                                                                                        
-Video Stream --> Docker(Kafka producer python) --> Docker(Kafka cluster) --> Docker(Kafka Seldon Core) --> monitoring
-                                                                                                       --> Display Dashboard
+                                             -                                 --> Docker(Kafka cluster) --> Docker(Kafka/Seldon Core) --> monitoring
+                                                                                                                                       --> Display Dashboard
 
 
 ## Video Source
+0. a video file
+1. video source --> RTSP stream --> Kafka producer 
 
-1. RTSP stream --> Kafka
-
-
-## Install Zookeeper
-
-
-## Install Kafka
-
+Dockerfile
 
 ## Reference
 
