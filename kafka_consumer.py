@@ -1,6 +1,7 @@
 import datetime
 from flask import Flask, Response, render_template
 from kafka import KafkaConsumer
+from video_analysis import .
 
 # Fire up the Kafka Consumer
 topic = "distributed-video1"
