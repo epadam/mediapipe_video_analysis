@@ -8,12 +8,11 @@ For production level application
 
 ## Architecture
 
-Video Source --> (Video Stream(webRTC/rtsp)) --> Docker(Kafka producer python) --> Docker(Kafka cluster) --> Docker(Kafka consumer/python + mediapipe) --> monitoring
-                                                                                                                                                       --> Display Dashboard  
-                                                                                                                       
-                                             -                                 --> Docker(Kafka cluster) --> Docker(Kafka/Seldon Core) --> monitoring
-                                                                                                                                       --> Display Dashboard
+Video Source --> (Video Stream(webRTC/rtsp)) --> Docker(Kafka producer python) --> Docker(Kafka cluster) --> Docker(Kafka consumer/python + mediapipe or seldon core) 
 
+-meta data-> Docker(kafka cluster) --> Docker(Spark)    --> Docker(Cassandra)     --> 
+                                   --> Docker(Logstash) --> Docker(ElasticSearch) --> Docker(API) --> Docker(UI) -->
+                                                                                  --> Docker(Kibana)             --> Browser
 
 ## Video Source
 0. a video file
